@@ -1,16 +1,15 @@
 import numpy as np
 
 def gradient_descent(x1, x2, y): 
-    w0 = 0                      # b_curr
-    w1 = w2 = 1                 # m_curr
-    
+    w0 = 0                      
+    w1 = w2 = 1                     
     iterations  = 3
     
     n = len(x1)
     learning_rate = 0.0002
     
     for i in range(iterations):
-        y_predicted =  w0 + (w1 * x1) + (w2 * x2)        # y_predicted = b_curr + m_curr * x  = w0 + w1 x1 + w2 x2        
+        y_predicted =  w0 + (w1 * x1) + (w2 * x2)                
         cost_1 = (1 /n ) * sum([val ** 2 for val in (y - y_predicted)])
         w0_d = - (2/n) * sum (y - y_predicted)  # bd
         
